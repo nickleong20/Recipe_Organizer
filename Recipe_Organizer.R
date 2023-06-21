@@ -25,10 +25,6 @@ search_recipe_by_ingredient <- function(ingredient) {
   return(matching_recipes)
 }
 
-# Update column names
-colnames(recipes) <- c("Recipe Name", "Ingredients", "Instructions")
-colnames(matching_recipes) <- c("Recipe Name", "Ingredients", "Instructions")
-
 # Example usage
 add_recipe("Pancakes", "Flour, Milk, Eggs, Sugar", "1. Mix ingredients, 2. Cook on a griddle")
 add_recipe("Spaghetti Bolognese", "Spaghetti, Ground beef, Tomato sauce, Onion, Garlic", "1. Cook spaghetti, 2. Brown ground beef, 3. Add sauce, onion, and garlic, 4. Simmer")
@@ -38,3 +34,7 @@ matching_recipes <- search_recipe_by_ingredient("Milk")
 
 # Print the matching recipes
 print(matching_recipes)
+
+# Update column names
+colnames(recipes) <- c("Recipe Name", "Ingredients", "Instructions")
+colnames(matching_recipes) <- c("Recipe Name", "Ingredients", "Instructions")
