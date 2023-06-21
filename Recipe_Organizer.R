@@ -20,7 +20,7 @@ add_recipe <- function(recipe_name, ingredients, instructions) {
 }
 
 # Function to search recipes by ingredient
-search_recipe_by_ingredient <- function(ingredient) {
+search_by_ingredient <- function(ingredient) {
   matching_recipes <- recipes[grepl(ingredient, recipes$ingredients, ignore.case = TRUE), ]
   return(matching_recipes)
 }
@@ -30,7 +30,7 @@ add_recipe("Pancakes", "Flour, Milk, Eggs, Sugar", "1. Mix ingredients, 2. Cook 
 add_recipe("Spaghetti Bolognese", "Spaghetti, Ground beef, Tomato sauce, Onion, Garlic", "1. Cook spaghetti, 2. Brown ground beef, 3. Add sauce, onion, and garlic, 4. Simmer")
 
 # Search for recipes with "Milk" as an ingredient
-matching_recipes <- search_recipe_by_ingredient("Milk")
+matching_recipes <- search_by_ingredient("Milk")
 
 # Print the matching recipes
 print(matching_recipes)
